@@ -1,0 +1,124 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  a {
+    all: unset;
+  }
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+  }
+  ul {
+    list-style-type: none;
+  }
+  body {
+    max-width: 1024px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    padding: 0 20px;
+  }
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+  .logo {
+    width: 60px;
+  }
+  .navbar {
+    font-size: 18px;
+  }
+  .navbar__list {
+    display: flex;
+  }
+  
+  .navbar__item:hover {
+    color: grey;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  .navbar__item:not(:last-child) {
+    margin-right: 20px;
+  }
+  
+  .left-side {
+    max-width: 380px;
+  }
+  .image-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 380px;
+  }
+  
+  .call-button {
+    all: unset;
+    background-color: dodgerblue;
+    padding: 10px 20px;
+    border-radius: 7px;
+    color: #fff;
+  }
+  
+  .call-button:hover {
+    background-color: rgb(77, 162, 247);
+    cursor: pointer;
+  }
+  
+  .main {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    justify-content: space-between;
+    width: 100%;
+  }
+  @keyframes scroll {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(-100%, 0);
+    }
+  }
+  
+  @media screen and (max-width: 786px) {
+    .main {
+      flex-direction: column;
+    }
+    .left-side {
+      max-width: 100%;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    .navbar__item {
+      margin: 0 !important;
+    }
+    .navbar__list {
+      flex-wrap: wrap;
+      max-width: 250px;
+      justify-content: space-evenly;
+      gap: 5px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    h1 {
+      font-size: 28px;
+    }
+    .logo {
+      display: none;
+    }
+    .call-button {
+      padding: 5px 10px;
+    }
+    .image-list {
+      flex-direction: column;
+    }
+  }
+  
